@@ -9,7 +9,14 @@ const at = () => {
   }
 };
 
+const atAssumingBoolean = () => {
+  if (debug.enabled) {
+    return new Error().stack.split(/\n/)[2].trim();
+  }
+};
+
 
 module.exports = {
   at,
+  atAssumingBoolean,
 }
