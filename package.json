@@ -4,7 +4,7 @@
   "description": "This repo is just a way to test out why-the-fuck `debug.enabled` affects `debug()` output making it dissapear sometimes.",
   "main": "index.js",
   "scripts": {
-    "testDebugSet": "DEBUG=* node check.debug.enabled.js",
+    "test": "DEBUG=* node check.debug.enabled.js",
     "testNoDebug": "node check.debug.enabled.js"
   },
   "keywords": [],
