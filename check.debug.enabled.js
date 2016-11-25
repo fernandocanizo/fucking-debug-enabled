@@ -14,8 +14,10 @@ console.log('Namespaces', typeof withNamespace.enabled);
 
 // Lines using at() with a debug required with no namespace doesn't get shown
 // even when calling this script with `DEBUG=*` set
-debugWithoutNamespace(util.at(), 'no namespace debug line, using debug.enabled as function');
+debugWithoutNamespace('no namespace debug line, no at()');
+debugWithoutNamespace(util.at(), 'no namespace debug line, using at()');
 
 
-withNamespace(util.at(), 'namespaced debug line');
+withNamespace('namespaced debug line, no at()');
+withNamespace(util.at(), 'namespaced debug line, with at()');
 
