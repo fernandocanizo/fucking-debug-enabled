@@ -10,14 +10,16 @@ const util = require('./util');
 
 
 console.log('Without namespace', typeof debugWithoutNamespace.enabled);
-console.log('Namespaces', typeof withNamespace.enabled);
+console.log('Namespaces', typeof withNamespace.enabled, '\n');
 
-// Lines using at() with a debug required with no namespace doesn't get shown
-// even when calling this script with `DEBUG=*` set
+console.log('Should print line 16');
 debugWithoutNamespace('no namespace debug line, no at()');
+
+console.log('Should print line 19');
 debugWithoutNamespace(util.at(), 'no namespace debug line, using at()');
 
-
+console.log('Should print line 22');
 withNamespace('namespaced debug line, no at()');
-withNamespace(util.at(), 'namespaced debug line, with at()');
 
+console.log('Should print line 24');
+withNamespace(util.at(), 'namespaced debug line, with at()');
